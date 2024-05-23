@@ -104,7 +104,6 @@ if "random_questions" not in st.session_state:
 
 st.title("Chatbot Rekomendasi Hemat Energi dan Air di Industri Dan Rumah Tangga 🏡💡💧")
 
-
 if "selected_question" in st.session_state and st.session_state.send_question:
     st.chat_message("user").markdown(st.session_state.selected_question)
     response = st.session_state.chat.send_message(st.session_state.selected_question)
@@ -124,7 +123,6 @@ if prompt := st.chat_input("Silahkan tulis pertanyaan anda disini..."):
     response = st.session_state.chat.send_message(prompt)
     with st.chat_message("assistant"):
         st.markdown(response.text)
-
 
 # Fungsi untuk menampilkan tombol pertanyaan acak
 def display_random_question_buttons():
